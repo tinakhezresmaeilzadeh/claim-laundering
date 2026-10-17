@@ -13,7 +13,7 @@ usage: llm_summaries.py LLM OUT
 """
 import json, re, sys, torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from build_ac import TEMPLATE, prompt as t3a_prompt
 
 LLM, OUT = sys.argv[1], sys.argv[2]

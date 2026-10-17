@@ -9,7 +9,7 @@ page, which shows the reward, is excluded):
 usage: ws_bon.py K OUT.json FIRST_GOAL N_GOALS
 """
 import json, random, re, sys, time, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from ws_common import make_env
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from decider.model import DecisionModel
@@ -19,7 +19,7 @@ from decider.systemone import render_question
 
 K, OUT, G0, NG = int(sys.argv[1]), sys.argv[2], int(sys.argv[3]), int(sys.argv[4])
 P_FAIL, MAX_STEPS, LIDX, TEMP = 0.3, 15, 10, 0.8
-INSTR = json.load(open("src/ws_instr.json"))["instructions"]
+INSTR = json.load(open("src/common/ws_instr.json"))["instructions"]
 VERIFY_Q = "Did the agent complete the task: is the purchased product the requested one, with every option required by the instruction selected?"
 NAV = {"back to search", "< prev", "next >", "description", "features", "reviews", "buy now"}
 CLAIM = re.compile(r"(?i)(selected|chosen|chose|picked|set)\b.*|now i can buy|ready to (buy|purchase)|all (required )?options")

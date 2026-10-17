@@ -5,7 +5,7 @@ import json, sys, types
 from pathlib import Path
 from rank_bm25 import BM25Okapi
 
-WS = Path(__file__).resolve().parents[1] / "ext/webshop"
+WS = Path(__file__).resolve().parents[2] / "ext/webshop"
 sys.path.insert(0, str(WS))
 
 

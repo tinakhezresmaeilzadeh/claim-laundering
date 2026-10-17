@@ -11,7 +11,7 @@ Options (fixed): buy now, first required option, description, back to search.
 usage: build_ws.py START N OUT
 """
 import json, random, sys
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from ws_common import make_env
 
 START, N, OUT = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]

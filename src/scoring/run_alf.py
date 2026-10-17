@@ -1,12 +1,12 @@
 """Score ALFWorld recovery states (build_alf.py) with an open decision model in the Jev format of the paper's ALFWorld
 adapter (state = ReAct transcript, choice over commands with ids A0..An + its instruction). Saves the probability of
 proceeding / retrying, a coupled verify question, and the decision-position hidden state of every 2nd layer.
-usage: run_alf.py {decider|kev} MODEL DATA OUT [INSTR_JSON]   (also used for WebShop with src/ws_instr.json)
+usage: run_alf.py {decider|kev} MODEL DATA OUT [INSTR_JSON]   (also used for WebShop with src/common/ws_instr.json)
 """
 import json, sys, time, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 BACKEND, MODEL, DATA, OUT = sys.argv[1:5]
-INSTR = json.load(open(sys.argv[5] if len(sys.argv) > 5 else "src/alf_instr.json"))["instructions"]
+INSTR = json.load(open(sys.argv[5] if len(sys.argv) > 5 else "src/common/alf_instr.json"))["instructions"]
 Q_VER = {"type": "noul", "instructions": "Did the most recent environment action in the transcript have its intended effect?"}
 rows = json.load(open(DATA)); EVERY = 2
 

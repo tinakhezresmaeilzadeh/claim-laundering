@@ -11,7 +11,7 @@ A veto takes the best non-'buy now' clickable instead.
 usage: ws_e2e.py GATE SEED OUT N_GOALS [FIRST_GOAL]   (GATE also: collect, probe2)
 """
 import json, random, sys, time, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from ws_common import make_env
 from sklearn.linear_model import LogisticRegression
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -22,7 +22,7 @@ from decider.systemone import render_question
 
 GATE, SEED, OUT, NG = sys.argv[1], int(sys.argv[2]), sys.argv[3], int(sys.argv[4])
 P_FAIL, MAX_STEPS, LIDX = 0.3, 15, 10
-INSTR = json.load(open("src/ws_instr.json"))["instructions"]
+INSTR = json.load(open("src/common/ws_instr.json"))["instructions"]
 VERIFY = "Have all options required by the instruction (such as size or color) been selected on the current page?"
 NAV = {"back to search", "< prev", "next >", "description", "features", "reviews", "buy now"}
 REJ = float(json.load(open("results/ws_e2e_verify_rate.json"))["rate"]) if GATE == "random" else 0.0

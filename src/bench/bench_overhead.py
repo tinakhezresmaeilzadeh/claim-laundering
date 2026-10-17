@@ -17,7 +17,7 @@ from decider.systemone import render_state, render_question
 
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "Mapika/decider-4b"; ITERS = int(sys.argv[2]) if len(sys.argv) > 2 else 30
 LAYER = 20
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 OPS_Q = {"type": "choice", "instructions": "Following native_t3a_prompt, choose the next single action type to advance the goal.",
          "criteria": {k: v for k, v in [('click', 'Click a UI element.'), ('long_press', 'Long press a UI element.'),
          ('input_text', 'Input text in a UI element.'), ('scroll', 'Scroll a UI element or screen.'), ('open_app', 'Open an installed app.'),

@@ -6,7 +6,7 @@ usage: run_jev.py {ac|alf|ws} DATA OUT_PREFIX [N] [WORKERS]
 """
 import json, os, sys, time, threading, requests
 from concurrent.futures import ThreadPoolExecutor
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 
 KIND, DATA, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
 N = int(sys.argv[4]) if len(sys.argv) > 4 else 10 ** 9; W = int(sys.argv[5]) if len(sys.argv) > 5 else 8
@@ -17,7 +17,7 @@ if KIND == "ac":
     from bench_overhead_common import OPS_Q
     Q_VER = {"type": "noul", "instructions": "Judging from the UI elements of the current screen in native_t3a_prompt, has the user goal already been achieved?"}
 else:
-    INSTR = json.load(open("src/alf_instr.json" if KIND == "alf" else "src/ws_instr.json"))["instructions"]
+    INSTR = json.load(open("src/common/alf_instr.json" if KIND == "alf" else "src/common/ws_instr.json"))["instructions"]
     Q_VER = {"type": "noul", "instructions": "Did the most recent environment action in the transcript have its intended effect?"}
 lock = threading.Lock(); outf = OUT + ".jsonl"
 done = {json.loads(l)["i"] for l in open(outf)} if os.path.exists(outf) else set()

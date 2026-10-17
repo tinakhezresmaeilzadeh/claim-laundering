@@ -16,7 +16,7 @@ from decider.prompt import build
 from decider.infer import Example, Q, _NoShuffle
 from decider.systemone import render_state, render_question
 from transformers.masking_utils import create_causal_mask
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 
 import os
 LS = [int(x) for x in os.environ.get("SB_LAYERS", "12,16,20,24,28").split(",")]; PL = 20   # re-read start layers (0 = record removed from the input); probe layer
@@ -43,7 +43,7 @@ def item(dom, r):
         ctx = render_state({"native_t3a_prompt": r["prompt"]}); rq = render_question(OPS_Q)
         term = list(OPS_Q["criteria"]).index("complete")
     else:
-        instr = json.load(open("src/alf_instr.json" if dom == "alfworld" else "src/ws_instr.json"))["instructions"]
+        instr = json.load(open("src/common/alf_instr.json" if dom == "alfworld" else "src/common/ws_instr.json"))["instructions"]
         ctx = r["prompt"]; rq = render_question({"type": "choice", "instructions": instr,
                                                  "criteria": {f"A{i}": c for i, c in enumerate(r["options"])}})
         term = r["proceed"]

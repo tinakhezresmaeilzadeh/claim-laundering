@@ -15,7 +15,7 @@ MODELS = [("decider4b_sub", "decider-4b", "o", lambda k: 2 * k), ("kev4b", "Kev-
 
 # ---- Fig. 1: what the model knows vs what it outputs. (a) phones: probe AUROC by relative depth, output heads as a band;
 # (b) all domains: output head (hollow) -> nested probe (filled), text-only classifier as a grey tick. Same models, same colours.
-LC = json.load(open(R + "layer_curves.json"))      # src/layer_curves.py
+LC = json.load(open(R + "layer_curves.json"))      # src/figures/layer_curves.py
 DEC = [("decider-4b", "decider4b", "o"), ("Kev-4B", "kev4b_full", "s"), ("decider-12b", "decider12b", "D")]
 fig, (ax, bx) = plt.subplots(1, 2, figsize=(3.3, 2.05), sharey=True, gridspec_kw=dict(width_ratios=[1.1, 1]))
 heads = [LC["phones"][m]["head"] for m, _, _ in DEC]

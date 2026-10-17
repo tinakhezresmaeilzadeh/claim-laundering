@@ -12,7 +12,7 @@ commands of the pre-action state. Gold: proceed if truth=1, else retry.
 usage: build_alf.py SPLIT N_GAMES K OUT
 """
 import json, random, sys
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from alf_common import make_env, task_kind, transcript, clean_obs, EFFECTFUL
 
 split, N, K, OUT = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]

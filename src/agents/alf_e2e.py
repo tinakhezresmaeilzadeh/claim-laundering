@@ -14,7 +14,7 @@ environment action (not THINK):
 usage: alf_e2e.py GATE SEED OUT [N_GAMES]
 """
 import json, random, sys, time, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from alf_common import make_env, task_kind, transcript, clean_obs, EFFECTFUL, INSTRUCTIONS
 from sklearn.linear_model import LogisticRegression
 from transformers import AutoModelForCausalLM, AutoTokenizer

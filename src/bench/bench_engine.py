@@ -15,7 +15,7 @@ from decider.model import cap_logits
 import torch.nn.functional as F
 
 ITERS = int(sys.argv[1]) if len(sys.argv) > 1 else 30; LAYER = 20
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from bench_overhead_common import OPS_Q
 
 

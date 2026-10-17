@@ -9,7 +9,7 @@ General ability: accuracy on decider's held-out tasks hwu64 and dbpedia_l2 (firs
 usage: cit_eval.py {base|ADAPTER_DIR} OUT.json
 """
 import hashlib, json, sys, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from sklearn.metrics import roc_auc_score
 from decider.model import DecisionModel
 from decider.prompt import build
@@ -41,7 +41,7 @@ def domain(name, rows):
             l = lp(render_state({"native_t3a_prompt": r["prompt"]}), rq["question"], rq["options"])
             key = str(r["ep"])
         else:
-            instr = json.load(open("src/alf_instr.json" if name == "alfworld" else "src/ws_instr.json"))["instructions"]
+            instr = json.load(open("src/common/alf_instr.json" if name == "alfworld" else "src/common/ws_instr.json"))["instructions"]
             rq = render_question({"type": "choice", "instructions": instr, "criteria": {f"A{i}": c for i, c in enumerate(r["options"])}})
             l = lp(r["prompt"], rq["question"], rq["options"]); T = r["proceed"]
             key = f"{r['game']}_{r['step']}" if name == "alfworld" else str(r["goal"])

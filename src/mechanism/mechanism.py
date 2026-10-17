@@ -14,7 +14,7 @@ from decider.model import DecisionModel
 from decider.prompt import build
 from decider.infer import Example, Q, _NoShuffle
 from decider.systemone import render_state, render_question
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from bench_overhead_common import OPS_Q
 
 N = int(sys.argv[1]) if len(sys.argv) > 1 else 100

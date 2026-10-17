@@ -4,3 +4,4 @@ peft==0.21.2
 tfrecord==1.14.6
 torch==2.8.0
 transformers==5.19.0
+scikit-learn==1.9.1

@@ -12,7 +12,7 @@ usage: cit_train.py OUT_DIR [LAMBDA_KEEP] [DOMAINS] [PER_DOMAIN]
   PER_DOMAIN: random subsample of states per domain (default: all); or per domain in DOMAINS, e.g. phones:all,alfworld:1000.
 """
 import hashlib, json, math, random, sys, time, numpy as np, torch
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from peft import LoraConfig, get_peft_model
 from decider.model import DecisionModel
 from decider.prompt import build
@@ -38,7 +38,7 @@ for dom in DOMS:
         rq = render_question(OPS_Q); Tc = list(OPS_Q["criteria"]).index("complete")
     else:
         rows = json.load(open("results/alf_train.json" if dom == "alfworld" else "results/ws_train.json"))
-        instr = json.load(open("src/alf_instr.json" if dom == "alfworld" else "src/ws_instr.json"))["instructions"]
+        instr = json.load(open("src/common/alf_instr.json" if dom == "alfworld" else "src/common/ws_instr.json"))["instructions"]
     rows = random.Random(SEED).sample(rows, min(SIZE[dom], len(rows)))
     for r in rows:
         if dom == "phones": ctx, q, opts, t = render_state({"native_t3a_prompt": r["prompt"]}), rq["question"], rq["options"], Tc

@@ -6,7 +6,7 @@ usage: bench_kev.py ITERS   (run in venv_kev)
 import json, sys, numpy as np, torch
 from kev.predictors import LocalPredictor
 from kev.checkpoint import LoadOptions
-sys.path.insert(0, "src")
+sys.path[:0] = ["src/common", "src/data"]
 from bench_overhead_common import OPS_Q
 
 ITERS = int(sys.argv[1]) if len(sys.argv) > 1 else 20; LAYER = 20
