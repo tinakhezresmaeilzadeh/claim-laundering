@@ -128,7 +128,8 @@ Outputs are written to `results/`. The hidden-state files (`.npz`) are large and
 **ALFWorld and WebShop.** Agents run once per test task, with a **30% probability that an effectful action fails
 silently**. EviGate is fit on states recorded from the same agent on separate training tasks. We compare no gate, a
 second verification question, EviGate, and random vetoes. In WebShop the random veto uses EviGate's measured veto rate;
-in ALFWorld it uses the true failure rate among gated states on the training tasks (78.6%, vs. 75.5% for EviGate).
+in ALFWorld it uses the true failure rate among gated states on the training tasks (79.7%; the measured random veto
+rate was 78.6%, vs. 75.5% for EviGate).
 
 **Phone simulator.** A text simulator, **not Android emulation**: 24 tasks across 11 apps, 30 seeds per task. The
 decisive tap fails with probability **40% on the first attempt** and **20% on retries**. After a failed tap, a
