@@ -1,0 +1,6 @@
+flash-linear-attention==0.5.2
+numpy==2.5.4
+peft==0.21.2
+tfrecord==1.14.6
+torch==2.8.0
+transformers==5.19.0

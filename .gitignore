@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+venv*/
+ext/
+data/*
+!data/ac_sub_episodes.json
+results/*
+!results/summaries/
+figs/
+*.npz
+*.npy
+*.safetensors
+.openrouter_key

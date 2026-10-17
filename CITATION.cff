@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Claim Laundering: When Agent Decision Models Trust Records Over Reality"
+authors:
+  - family-names: Khezresmaeilzadeh
+    given-names: Tina
+  - family-names: Azizi
+    given-names: Seyedarmin
+  - family-names: Kamal
+    given-names: Mehdi
+  - family-names: Pedram
+    given-names: Massoud
+affiliation: "University of Southern California"
+year: 2026

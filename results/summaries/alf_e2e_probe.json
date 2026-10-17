@@ -1,0 +1,1351 @@
+{
+ "summary": {
+  "gate": "probe",
+  "seed": 0,
+  "success": 0.582089552238806,
+  "calls": 30.71641791044776,
+  "intervention_rate": 0.7636363636363637
+ },
+ "episodes": [
+  {
+   "game": 0,
+   "kind": "cool",
+   "won": true,
+   "steps": 5,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 5
+  },
+  {
+   "game": 1,
+   "kind": "clean",
+   "won": true,
+   "steps": 11,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 11
+  },
+  {
+   "game": 2,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 3,
+   "kind": "cool",
+   "won": true,
+   "steps": 24,
+   "injected": 3,
+   "gate_triggers": 4,
+   "gate_interventions": 3,
+   "calls": 24
+  },
+  {
+   "game": 4,
+   "kind": "clean",
+   "won": true,
+   "steps": 27,
+   "injected": 9,
+   "gate_triggers": 10,
+   "gate_interventions": 9,
+   "calls": 27
+  },
+  {
+   "game": 5,
+   "kind": "put",
+   "won": true,
+   "steps": 49,
+   "injected": 2,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 49
+  },
+  {
+   "game": 6,
+   "kind": "clean",
+   "won": true,
+   "steps": 21,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 21
+  },
+  {
+   "game": 7,
+   "kind": "cool",
+   "won": true,
+   "steps": 10,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 10
+  },
+  {
+   "game": 8,
+   "kind": "put",
+   "won": true,
+   "steps": 31,
+   "injected": 5,
+   "gate_triggers": 5,
+   "gate_interventions": 5,
+   "calls": 31
+  },
+  {
+   "game": 9,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 10,
+   "kind": "examine",
+   "won": true,
+   "steps": 9,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 11,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 12,
+   "kind": "clean",
+   "won": true,
+   "steps": 31,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 31
+  },
+  {
+   "game": 13,
+   "kind": "clean",
+   "won": true,
+   "steps": 8,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 8
+  },
+  {
+   "game": 14,
+   "kind": "put",
+   "won": true,
+   "steps": 5,
+   "injected": 1,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 5
+  },
+  {
+   "game": 15,
+   "kind": "clean",
+   "won": true,
+   "steps": 15,
+   "injected": 3,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 15
+  },
+  {
+   "game": 16,
+   "kind": "heat",
+   "won": true,
+   "steps": 8,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 8
+  },
+  {
+   "game": 17,
+   "kind": "cool",
+   "won": true,
+   "steps": 9,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 18,
+   "kind": "examine",
+   "won": true,
+   "steps": 22,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 22
+  },
+  {
+   "game": 19,
+   "kind": "heat",
+   "won": true,
+   "steps": 10,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 10
+  },
+  {
+   "game": 20,
+   "kind": "put",
+   "won": true,
+   "steps": 18,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 18
+  },
+  {
+   "game": 21,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 22,
+   "kind": "cool",
+   "won": true,
+   "steps": 11,
+   "injected": 4,
+   "gate_triggers": 4,
+   "gate_interventions": 3,
+   "calls": 11
+  },
+  {
+   "game": 23,
+   "kind": "cool",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 24,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 25,
+   "kind": "cool",
+   "won": true,
+   "steps": 7,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 7
+  },
+  {
+   "game": 26,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 27,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 28,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 50
+  },
+  {
+   "game": 29,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 30,
+   "kind": "examine",
+   "won": true,
+   "steps": 18,
+   "injected": 4,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 18
+  },
+  {
+   "game": 31,
+   "kind": "examine",
+   "won": true,
+   "steps": 30,
+   "injected": 6,
+   "gate_triggers": 6,
+   "gate_interventions": 6,
+   "calls": 30
+  },
+  {
+   "game": 32,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 2,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 33,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 34,
+   "kind": "clean",
+   "won": true,
+   "steps": 15,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 15
+  },
+  {
+   "game": 35,
+   "kind": "examine",
+   "won": true,
+   "steps": 9,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 36,
+   "kind": "heat",
+   "won": true,
+   "steps": 17,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 17
+  },
+  {
+   "game": 37,
+   "kind": "put",
+   "won": true,
+   "steps": 19,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 19
+  },
+  {
+   "game": 38,
+   "kind": "examine",
+   "won": false,
+   "steps": 50,
+   "injected": 13,
+   "gate_triggers": 36,
+   "gate_interventions": 35,
+   "calls": 50
+  },
+  {
+   "game": 39,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 40,
+   "kind": "put",
+   "won": true,
+   "steps": 9,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 9
+  },
+  {
+   "game": 41,
+   "kind": "heat",
+   "won": true,
+   "steps": 23,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 23
+  },
+  {
+   "game": 42,
+   "kind": "cool",
+   "won": true,
+   "steps": 11,
+   "injected": 3,
+   "gate_triggers": 4,
+   "gate_interventions": 3,
+   "calls": 11
+  },
+  {
+   "game": 43,
+   "kind": "heat",
+   "won": true,
+   "steps": 9,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 9
+  },
+  {
+   "game": 44,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 5,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 45,
+   "kind": "cool",
+   "won": true,
+   "steps": 14,
+   "injected": 6,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 14
+  },
+  {
+   "game": 46,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 47,
+   "kind": "heat",
+   "won": true,
+   "steps": 10,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 10
+  },
+  {
+   "game": 48,
+   "kind": "cool",
+   "won": true,
+   "steps": 8,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 8
+  },
+  {
+   "game": 49,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 2,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 50,
+   "kind": "clean",
+   "won": true,
+   "steps": 35,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 35
+  },
+  {
+   "game": 51,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 52,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 53,
+   "kind": "clean",
+   "won": true,
+   "steps": 10,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 10
+  },
+  {
+   "game": 54,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 55,
+   "kind": "examine",
+   "won": true,
+   "steps": 20,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 20
+  },
+  {
+   "game": 56,
+   "kind": "cool",
+   "won": true,
+   "steps": 9,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 57,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 58,
+   "kind": "clean",
+   "won": true,
+   "steps": 23,
+   "injected": 3,
+   "gate_triggers": 4,
+   "gate_interventions": 3,
+   "calls": 23
+  },
+  {
+   "game": 59,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 60,
+   "kind": "cool",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 61,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 62,
+   "kind": "put",
+   "won": true,
+   "steps": 6,
+   "injected": 1,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 6
+  },
+  {
+   "game": 63,
+   "kind": "put",
+   "won": true,
+   "steps": 20,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 20
+  },
+  {
+   "game": 64,
+   "kind": "heat",
+   "won": true,
+   "steps": 49,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 49
+  },
+  {
+   "game": 65,
+   "kind": "examine",
+   "won": true,
+   "steps": 16,
+   "injected": 1,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 16
+  },
+  {
+   "game": 66,
+   "kind": "examine",
+   "won": true,
+   "steps": 14,
+   "injected": 3,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 14
+  },
+  {
+   "game": 67,
+   "kind": "cool",
+   "won": true,
+   "steps": 5,
+   "injected": 1,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 5
+  },
+  {
+   "game": 68,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 69,
+   "kind": "cool",
+   "won": true,
+   "steps": 9,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 9
+  },
+  {
+   "game": 70,
+   "kind": "examine",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 71,
+   "kind": "put",
+   "won": true,
+   "steps": 19,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 19
+  },
+  {
+   "game": 72,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 73,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 74,
+   "kind": "cool",
+   "won": true,
+   "steps": 15,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 15
+  },
+  {
+   "game": 75,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 76,
+   "kind": "put",
+   "won": true,
+   "steps": 47,
+   "injected": 3,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 47
+  },
+  {
+   "game": 77,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 78,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 4,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 50
+  },
+  {
+   "game": 79,
+   "kind": "cool",
+   "won": true,
+   "steps": 13,
+   "injected": 4,
+   "gate_triggers": 4,
+   "gate_interventions": 3,
+   "calls": 13
+  },
+  {
+   "game": 80,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 81,
+   "kind": "examine",
+   "won": true,
+   "steps": 9,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 82,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 83,
+   "kind": "put",
+   "won": true,
+   "steps": 48,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 48
+  },
+  {
+   "game": 84,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 85,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 86,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 87,
+   "kind": "examine",
+   "won": true,
+   "steps": 17,
+   "injected": 3,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 17
+  },
+  {
+   "game": 88,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 89,
+   "kind": "examine",
+   "won": true,
+   "steps": 18,
+   "injected": 2,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 18
+  },
+  {
+   "game": 90,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 50
+  },
+  {
+   "game": 91,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 92,
+   "kind": "clean",
+   "won": true,
+   "steps": 10,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 10
+  },
+  {
+   "game": 93,
+   "kind": "heat",
+   "won": true,
+   "steps": 16,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 16
+  },
+  {
+   "game": 94,
+   "kind": "examine",
+   "won": true,
+   "steps": 16,
+   "injected": 3,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 16
+  },
+  {
+   "game": 95,
+   "kind": "clean",
+   "won": true,
+   "steps": 7,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 7
+  },
+  {
+   "game": 96,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 97,
+   "kind": "examine",
+   "won": true,
+   "steps": 22,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 22
+  },
+  {
+   "game": 98,
+   "kind": "examine",
+   "won": true,
+   "steps": 12,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 12
+  },
+  {
+   "game": 99,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 100,
+   "kind": "examine",
+   "won": true,
+   "steps": 13,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 13
+  },
+  {
+   "game": 101,
+   "kind": "cool",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 102,
+   "kind": "clean",
+   "won": true,
+   "steps": 17,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 17
+  },
+  {
+   "game": 103,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 104,
+   "kind": "examine",
+   "won": true,
+   "steps": 20,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 20
+  },
+  {
+   "game": 105,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 106,
+   "kind": "put",
+   "won": true,
+   "steps": 4,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 4
+  },
+  {
+   "game": 107,
+   "kind": "clean",
+   "won": true,
+   "steps": 22,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 22
+  },
+  {
+   "game": 108,
+   "kind": "clean",
+   "won": true,
+   "steps": 23,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 23
+  },
+  {
+   "game": 109,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 110,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 111,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 1,
+   "calls": 50
+  },
+  {
+   "game": 112,
+   "kind": "cool",
+   "won": true,
+   "steps": 7,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 7
+  },
+  {
+   "game": 113,
+   "kind": "cool",
+   "won": true,
+   "steps": 8,
+   "injected": 2,
+   "gate_triggers": 3,
+   "gate_interventions": 2,
+   "calls": 8
+  },
+  {
+   "game": 114,
+   "kind": "clean",
+   "won": true,
+   "steps": 9,
+   "injected": 3,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 9
+  },
+  {
+   "game": 115,
+   "kind": "put",
+   "won": true,
+   "steps": 8,
+   "injected": 3,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 8
+  },
+  {
+   "game": 116,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 117,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 4,
+   "gate_triggers": 5,
+   "gate_interventions": 4,
+   "calls": 50
+  },
+  {
+   "game": 118,
+   "kind": "put",
+   "won": true,
+   "steps": 10,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 10
+  },
+  {
+   "game": 119,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 120,
+   "kind": "cool",
+   "won": true,
+   "steps": 9,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 9
+  },
+  {
+   "game": 121,
+   "kind": "clean",
+   "won": true,
+   "steps": 11,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 11
+  },
+  {
+   "game": 122,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 123,
+   "kind": "puttwo",
+   "won": true,
+   "steps": 17,
+   "injected": 5,
+   "gate_triggers": 5,
+   "gate_interventions": 5,
+   "calls": 17
+  },
+  {
+   "game": 124,
+   "kind": "heat",
+   "won": true,
+   "steps": 9,
+   "injected": 1,
+   "gate_triggers": 2,
+   "gate_interventions": 1,
+   "calls": 9
+  },
+  {
+   "game": 125,
+   "kind": "puttwo",
+   "won": true,
+   "steps": 44,
+   "injected": 1,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 44
+  },
+  {
+   "game": 126,
+   "kind": "clean",
+   "won": true,
+   "steps": 30,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 30
+  },
+  {
+   "game": 127,
+   "kind": "put",
+   "won": true,
+   "steps": 38,
+   "injected": 4,
+   "gate_triggers": 3,
+   "gate_interventions": 3,
+   "calls": 38
+  },
+  {
+   "game": 128,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 4,
+   "gate_triggers": 4,
+   "gate_interventions": 2,
+   "calls": 50
+  },
+  {
+   "game": 129,
+   "kind": "cool",
+   "won": true,
+   "steps": 9,
+   "injected": 1,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 9
+  },
+  {
+   "game": 130,
+   "kind": "puttwo",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 131,
+   "kind": "put",
+   "won": false,
+   "steps": 50,
+   "injected": 2,
+   "gate_triggers": 2,
+   "gate_interventions": 2,
+   "calls": 50
+  },
+  {
+   "game": 132,
+   "kind": "clean",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 1,
+   "gate_interventions": 0,
+   "calls": 50
+  },
+  {
+   "game": 133,
+   "kind": "heat",
+   "won": false,
+   "steps": 50,
+   "injected": 0,
+   "gate_triggers": 0,
+   "gate_interventions": 0,
+   "calls": 50
+  }
+ ]
+}

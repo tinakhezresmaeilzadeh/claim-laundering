@@ -1,0 +1,119 @@
+{
+ "phones": {
+  "n": 800,
+  "dropped_tokens_mean": 110.9725,
+  "auroc": {
+   "head": [
+    0.507509375,
+    0.499575
+   ],
+   "probe (EviGate)": [
+    0.7551749999999999,
+    0.7370374999999998
+   ],
+   "blind@0": [
+    0.52949375,
+    0.5294125000000001
+   ],
+   "-reliance@0": [
+    0.53105,
+    0.5304125
+   ]
+  },
+  "gate": {
+   "none": {
+    "failed_pass": 0.775,
+    "worked_vetoed": 0.0,
+    "claimed_failed_pass": 0.945
+   },
+   "EviGate": {
+    "failed_pass": 0.245,
+    "worked_vetoed": 0.2692307692307692,
+    "claimed_failed_pass": 0.325
+   },
+   "flip@0": {
+    "failed_pass": 0.0225,
+    "worked_vetoed": 0.9294871794871795,
+    "claimed_failed_pass": 0.025
+   }
+  }
+ },
+ "alfworld": {
+  "n": 1180,
+  "dropped_tokens_mean": 83.2813559322034,
+  "auroc": {
+   "head": [
+    0.840114909508762,
+    0.9059925308819305
+   ],
+   "probe (EviGate)": [
+    1.0,
+    1.0
+   ],
+   "blind@0": [
+    0.9426457914392417,
+    0.9413386957770755
+   ],
+   "-reliance@0": [
+    0.9052025280091928,
+    0.9417753519103705
+   ]
+  },
+  "gate": {
+   "none": {
+    "failed_pass": 0.5915254237288136,
+    "worked_vetoed": 0.0,
+    "claimed_failed_pass": 0.8983050847457628
+   },
+   "EviGate": {
+    "failed_pass": 0.005084745762711864,
+    "worked_vetoed": 0.0,
+    "claimed_failed_pass": 0.006779661016949152
+   },
+   "flip@0": {
+    "failed_pass": 0.09491525423728814,
+    "worked_vetoed": 0.12797074954296161,
+    "claimed_failed_pass": 0.1016949152542373
+   }
+  }
+ },
+ "webshop": {
+  "n": 1200,
+  "dropped_tokens_mean": 61.41,
+  "auroc": {
+   "head": [
+    0.49885,
+    0.45517777777777774
+   ],
+   "probe (EviGate)": [
+    0.9999944444444444,
+    1.0
+   ],
+   "blind@0": [
+    0.9845666666666666,
+    0.9837888888888889
+   ],
+   "-reliance@0": [
+    0.9857527777777778,
+    0.9847222222222223
+   ]
+  },
+  "gate": {
+   "none": {
+    "failed_pass": 0.9966666666666667,
+    "worked_vetoed": 0.0,
+    "claimed_failed_pass": 1.0
+   },
+   "EviGate": {
+    "failed_pass": 0.0,
+    "worked_vetoed": 0.005016722408026756,
+    "claimed_failed_pass": 0.0
+   },
+   "flip@0": {
+    "failed_pass": 0.06,
+    "worked_vetoed": 0.07525083612040134,
+    "claimed_failed_pass": 0.06
+   }
+  }
+ }
+}

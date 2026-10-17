@@ -1,0 +1,56 @@
+{
+ "model": "Qwen3.5-4B-Base",
+ "nested_layers": [
+  11,
+  9,
+  16,
+  10,
+  10
+ ],
+ "auroc": {
+  "output head p(complete)": {
+   "all": 0.5876041666666666,
+   "explicit_matched": 0.5030875
+  },
+  "coupled verify question": {
+   "all": 0.6275458333333334,
+   "explicit_matched": 0.5477375000000001
+  },
+  "nested probe": {
+   "all": 0.6455291666666667,
+   "explicit_matched": 0.6203375
+  },
+  "TF-IDF screen-only": {
+   "all": 0.5858375,
+   "explicit_matched": 0.5858375
+  },
+  "TF-IDF full prompt": {
+   "all": 0.5924250000000001,
+   "explicit_matched": 0.5793125
+  }
+ },
+ "gap_probe_minus_head": {
+  "all": [
+   0.05544503450145073,
+   0.016214505995207497,
+   0.08861996028569148
+  ],
+  "explicit_matched": [
+   0.11334325214549608,
+   0.05894500569721436,
+   0.1619489619050451
+  ]
+ },
+ "gap_probe_minus_tfidf_screen": [
+  0.061177090157376275,
+  0.02822078391398309,
+  0.09885815954236293
+ ],
+ "learning_curve": {
+  "10": 0.5865,
+  "25": 0.604025,
+  "50": 0.6380166666666667,
+  "100": 0.6558291666666667,
+  "200": 0.6807875
+ }
+}

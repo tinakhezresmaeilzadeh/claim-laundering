@@ -1,0 +1,24 @@
+{
+ "llm_claims_success_on_failed_step": 0.39,
+ "stop_rate_D_llm": 0.675,
+ "stop_rate_N_llm_fail": 0.46,
+ "stop_rate_N_honest": 0.27,
+ "stop_rate_N_llm_fail_claiming": 0.7692307692307693,
+ "stop_rate_N_llm_fail_honest": 0.26229508196721313,
+ "effect_logged_failed_step (N_llm_fail - N_honest)": [
+  0.34806719422340393,
+  0.05130999907851219,
+  0.6301065683364868
+ ],
+ "effect_screen (D_llm - N_llm_fail)": [
+  0.8558769226074219,
+  0.6278397440910339,
+  1.0940122604370117
+ ],
+ "head_auroc": 0.6421375,
+ "probe_auroc_in_domain(best layer, optimistic)": [
+  0.8554375,
+  9
+ ],
+ "probe_auroc_transfer_from_templated(layer20)": 0.7957124999999999
+}

@@ -1,0 +1,93 @@
+{
+ "model": "Laya-multilingual",
+ "n": 1000,
+ "effects": {
+  "evidence (D_plain - N_implicit, same history)": [
+   -0.03670341121837259,
+   -0.13403048396132594,
+   0.06158312298066775
+  ],
+  "implicit claim (N_implicit - N_honest, same screen)": [
+   -0.009369184763513254,
+   -0.05503735789206412,
+   0.03816911470700424
+  ],
+  "explicit claim (N_explicit - N_implicit, same screen)": [
+   0.3224706980695548,
+   0.2735236263207726,
+   0.37555100942765357
+  ]
+ },
+ "probe": {
+  "0": [
+   0.6177291666666667,
+   0.6033375,
+   0.6052375
+  ]
+ },
+ "rules": {
+  "baseline argmax": {
+   "bal_acc": 0.4966666666666667,
+   "false_completion": 0.051666666666666666,
+   "missed_completion": 0.955,
+   "trap_false_completion": 0.065,
+   "auroc": 0.5163562500000001,
+   "auroc_explicit_matched": 0.49835000000000007,
+   "auroc_implicit_matched": 0.48552500000000004
+  },
+  "baseline p(complete) tuned threshold": {
+   "bal_acc": 0.5304166666666666,
+   "false_completion": 0.5666666666666667,
+   "missed_completion": 0.3725,
+   "trap_false_completion": 0.5875,
+   "auroc": 0.5163562500000001,
+   "auroc_explicit_matched": 0.49835000000000007,
+   "auroc_implicit_matched": 0.48552500000000004
+  },
+  "F1 coupled verify question": {
+   "bal_acc": 0.55125,
+   "false_completion": 0.35,
+   "missed_completion": 0.5475,
+   "trap_false_completion": 0.345,
+   "auroc": 0.5710500000000001,
+   "auroc_explicit_matched": 0.5738125000000001,
+   "auroc_implicit_matched": 0.567225
+  },
+  "F2 evidence-contrast a=1.0": {
+   "bal_acc": 0.49124999999999996,
+   "false_completion": 0.715,
+   "missed_completion": 0.3025,
+   "trap_false_completion": 0.715,
+   "auroc": 0.49743125,
+   "auroc_explicit_matched": 0.49143749999999997,
+   "auroc_implicit_matched": 0.48377499999999996
+  },
+  "F2 evidence-contrast a=2.0": {
+   "bal_acc": 0.49,
+   "false_completion": 0.86,
+   "missed_completion": 0.16,
+   "trap_false_completion": 0.8575,
+   "auroc": 0.4917604166666667,
+   "auroc_explicit_matched": 0.4909375,
+   "auroc_implicit_matched": 0.482825
+  },
+  "F2 evidence-contrast a=4.0": {
+   "bal_acc": 0.4904166666666666,
+   "false_completion": 0.8666666666666667,
+   "missed_completion": 0.1525,
+   "trap_false_completion": 0.8675,
+   "auroc": 0.48768124999999996,
+   "auroc_explicit_matched": 0.4890375,
+   "auroc_implicit_matched": 0.48312499999999997
+  },
+  "F3 probe readout (layer-idx 0)": {
+   "bal_acc": 0.59125,
+   "false_completion": 0.285,
+   "missed_completion": 0.5325,
+   "trap_false_completion": 0.3075,
+   "auroc": 0.6177291666666667,
+   "auroc_explicit_matched": 0.6033375,
+   "auroc_implicit_matched": 0.6052375
+  }
+ }
+}

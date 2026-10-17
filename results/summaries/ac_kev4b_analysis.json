@@ -1,0 +1,168 @@
+{
+ "model": "Kev-4B",
+ "n": 1000,
+ "effects": {
+  "evidence (D_plain - N_implicit, same history)": [
+   0.09446161985397339,
+   0.07050611078739166,
+   0.119620181620121
+  ],
+  "implicit claim (N_implicit - N_honest, same screen)": [
+   0.2074054330587387,
+   0.17109890282154083,
+   0.24482984840869904
+  ],
+  "explicit claim (N_explicit - N_implicit, same screen)": [
+   0.31495293974876404,
+   0.29580968618392944,
+   0.3324785530567169
+  ]
+ },
+ "probe": {
+  "0": [
+   0.5879791666666666,
+   0.5738125,
+   0.5711375000000001
+  ],
+  "1": [
+   0.5958125,
+   0.5719125,
+   0.5873125
+  ],
+  "2": [
+   0.5901000000000001,
+   0.5711125,
+   0.5731125
+  ],
+  "3": [
+   0.6173583333333332,
+   0.5991375000000001,
+   0.5938375
+  ],
+  "4": [
+   0.6313083333333332,
+   0.6110125,
+   0.6131375
+  ],
+  "5": [
+   0.6322541666666667,
+   0.6022625,
+   0.6087625000000001
+  ],
+  "6": [
+   0.6809375,
+   0.6468375000000001,
+   0.6561625
+  ],
+  "7": [
+   0.7415999999999999,
+   0.7301375000000001,
+   0.7283124999999999
+  ],
+  "8": [
+   0.7805083333333334,
+   0.7680625,
+   0.7631125
+  ],
+  "9": [
+   0.7869291666666666,
+   0.7767625,
+   0.7705375
+  ],
+  "10": [
+   0.7868791666666666,
+   0.7740125,
+   0.7707375000000001
+  ],
+  "11": [
+   0.7875916666666666,
+   0.7691375,
+   0.7671125
+  ],
+  "12": [
+   0.7898333333333334,
+   0.7692875,
+   0.7692125
+  ],
+  "13": [
+   0.7839833333333334,
+   0.7608124999999999,
+   0.7625125
+  ],
+  "14": [
+   0.7768125,
+   0.7548374999999998,
+   0.7549125
+  ],
+  "15": [
+   0.7719416666666666,
+   0.7516375,
+   0.7448125000000001
+  ]
+ },
+ "rules": {
+  "baseline argmax": {
+   "bal_acc": 0.5862499999999999,
+   "false_completion": 0.74,
+   "missed_completion": 0.0875,
+   "trap_false_completion": 0.875,
+   "auroc": 0.6549875,
+   "auroc_explicit_matched": 0.5552375,
+   "auroc_implicit_matched": 0.5869125000000001
+  },
+  "baseline p(complete) tuned threshold": {
+   "bal_acc": 0.6012500000000001,
+   "false_completion": 0.325,
+   "missed_completion": 0.4725,
+   "trap_false_completion": 0.45,
+   "auroc": 0.6549875,
+   "auroc_explicit_matched": 0.5552375,
+   "auroc_implicit_matched": 0.5869125000000001
+  },
+  "F1 coupled verify question": {
+   "bal_acc": 0.6058333333333333,
+   "false_completion": 0.47333333333333333,
+   "missed_completion": 0.315,
+   "trap_false_completion": 0.585,
+   "auroc": 0.6609541666666667,
+   "auroc_explicit_matched": 0.5754125000000001,
+   "auroc_implicit_matched": 0.6139625
+  },
+  "F2 evidence-contrast a=1.0": {
+   "bal_acc": 0.6116666666666667,
+   "false_completion": 0.39666666666666667,
+   "missed_completion": 0.38,
+   "trap_false_completion": 0.46,
+   "auroc": 0.6708041666666666,
+   "auroc_explicit_matched": 0.6110875,
+   "auroc_implicit_matched": 0.6562374999999998
+  },
+  "F2 evidence-contrast a=2.0": {
+   "bal_acc": 0.6145833333333334,
+   "false_completion": 0.35333333333333333,
+   "missed_completion": 0.4175,
+   "trap_false_completion": 0.3475,
+   "auroc": 0.6526333333333333,
+   "auroc_explicit_matched": 0.6282875,
+   "auroc_implicit_matched": 0.6661624999999999
+  },
+  "F2 evidence-contrast a=4.0": {
+   "bal_acc": 0.5945833333333334,
+   "false_completion": 0.42833333333333334,
+   "missed_completion": 0.3825,
+   "trap_false_completion": 0.3825,
+   "auroc": 0.6170583333333335,
+   "auroc_explicit_matched": 0.6296375000000001,
+   "auroc_implicit_matched": 0.6593875
+  },
+  "F3 probe readout (layer-idx 12)": {
+   "bal_acc": 0.7104166666666667,
+   "false_completion": 0.32166666666666666,
+   "missed_completion": 0.2575,
+   "trap_false_completion": 0.3725,
+   "auroc": 0.7898333333333334,
+   "auroc_explicit_matched": 0.7692875,
+   "auroc_implicit_matched": 0.7692125
+  }
+ }
+}

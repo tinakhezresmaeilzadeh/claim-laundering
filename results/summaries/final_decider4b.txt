@@ -1,0 +1,12 @@
+===== decider-4b
+nested layers chosen per fold: [9, 9, 9, 10, 10]
+  AUROC output head p(complete)    all=0.630  explicit-matched=0.505
+  AUROC coupled verify question    all=0.646  explicit-matched=0.538
+  AUROC nested probe               all=0.773  explicit-matched=0.739
+  AUROC TF-IDF screen-only         all=0.594  explicit-matched=0.594
+  AUROC TF-IDF full prompt         all=0.617  explicit-matched=0.591
+  probe - head gap (all): +0.140 [+0.105, +0.169]
+  probe - head gap (explicit_matched): +0.229 [+0.187, +0.266]
+  probe - TF-IDF(screen) gap: +0.177 [+0.141, +0.205]
+  learning curve (train episodes -> AUROC): {10: 0.684, 25: 0.678, 50: 0.705, 100: 0.728, 640: 0.784}
+  synthetic->real probe transfer: {'all': 0.626, 'explicit_matched': 0.554}

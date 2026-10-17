@@ -1,0 +1,56 @@
+{
+ "model": "Kev-0.8B",
+ "nested_layers": [
+  6,
+  6,
+  6,
+  6,
+  6
+ ],
+ "auroc": {
+  "output head p(complete)": {
+   "all": 0.5920020833333333,
+   "explicit_matched": 0.498825
+  },
+  "coupled verify question": {
+   "all": 0.5945208333333333,
+   "explicit_matched": 0.49033750000000004
+  },
+  "nested probe": {
+   "all": 0.640075,
+   "explicit_matched": 0.5888875
+  },
+  "TF-IDF screen-only": {
+   "all": 0.5858375,
+   "explicit_matched": 0.5858375
+  },
+  "TF-IDF full prompt": {
+   "all": 0.5924250000000001,
+   "explicit_matched": 0.5793125
+  }
+ },
+ "gap_probe_minus_head": {
+  "all": [
+   0.043430029094469316,
+   -0.006361789525701011,
+   0.08663072153474413
+  ],
+  "explicit_matched": [
+   0.08441479366760564,
+   0.018660464927583217,
+   0.13640803009729183
+  ]
+ },
+ "gap_probe_minus_tfidf_screen": [
+  0.05364236280400038,
+  0.018178211773354828,
+  0.09119551878034045
+ ],
+ "learning_curve": {
+  "10": 0.5643375,
+  "25": 0.57805,
+  "50": 0.592425,
+  "100": 0.6060416666666667,
+  "200": 0.640075
+ }
+}

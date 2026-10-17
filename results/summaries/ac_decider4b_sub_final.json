@@ -1,0 +1,56 @@
+{
+ "model": "decider-4b-sub",
+ "nested_layers": [
+  9,
+  10,
+  9,
+  10,
+  9
+ ],
+ "auroc": {
+  "output head p(complete)": {
+   "all": 0.6232125,
+   "explicit_matched": 0.4992875
+  },
+  "coupled verify question": {
+   "all": 0.6364708333333333,
+   "explicit_matched": 0.5274625
+  },
+  "nested probe": {
+   "all": 0.7524708333333334,
+   "explicit_matched": 0.7261125000000002
+  },
+  "TF-IDF screen-only": {
+   "all": 0.5858375,
+   "explicit_matched": 0.5858375
+  },
+  "TF-IDF full prompt": {
+   "all": 0.5924250000000001,
+   "explicit_matched": 0.5793125
+  }
+ },
+ "gap_probe_minus_head": {
+  "all": [
+   0.12681425113362585,
+   0.08318602906271366,
+   0.16091632003941558
+  ],
+  "explicit_matched": [
+   0.22441347081832827,
+   0.17762201415490814,
+   0.2619253318526546
+  ]
+ },
+ "gap_probe_minus_tfidf_screen": [
+  0.16545359321682182,
+  0.12166305963354497,
+  0.2062117282642377
+ ],
+ "learning_curve": {
+  "10": 0.6770958333333333,
+  "25": 0.7091166666666666,
+  "50": 0.7077125,
+  "100": 0.7273000000000001,
+  "200": 0.7586041666666666
+ }
+}
