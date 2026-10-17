@@ -106,13 +106,13 @@ Run the scripts **from the repository root**, in this order, with `venv` active:
 | `scripts/01_phones.sh` | Phone results in Tables 2–4; seven open models and the backbone comparison |
 | `scripts/02_alfworld_webshop.sh` | ALFWorld and WebShop results in Tables 2–4 |
 | `scripts/03_hosted_jev.sh` | Hosted Jev results; paired confidence intervals for Table 2 |
-| `scripts/04_mechanism.sh` | Section 6: activation patching (Figure 3, decider-12b) and steering |
+| `scripts/04_mechanism.sh` | Section 6: activation patching (Figure 2; decider-12b in Table 14) and steering |
 | `scripts/05_live_agents.sh` | Table 5: live agents and matched random vetoes |
 | `scripts/06_remove_record.sh` | Appendix: removing the record from later layers and from the input |
 | `scripts/07_finetune.sh` | Section 9 and Table 6: fine-tuning |
 | `scripts/08_overhead.sh` | Appendix: serving latency |
 | `scripts/09_best_of_n.sh` | Appendix: the probe as a best-of-*N* verifier |
-| `scripts/10_figures.sh` | Figures |
+| `scripts/10_figures.sh` | Figures 2, 4 and 5 |
 
 For example:
 
