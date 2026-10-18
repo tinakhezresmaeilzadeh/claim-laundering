@@ -8,6 +8,13 @@ agent's record of its earlier actions. These sources can disagree: an action may
 succeeded. We study whether decision models follow the observed state or the agent's record when making consequential
 decisions such as **stop**, **proceed**, or **buy**.
 
+<p align="center">
+  <img src="assets/example.png" width="560" alt="A record-state mismatch on a phone">
+</p>
+<p align="center"><em>A record–state mismatch. The agent's record (red) says Wi-Fi is on; the screen (blue) shows it is off.
+The decision model follows the record and declares the task done. EviGate, a probe on the model's own layer-20 state,
+reads the screen correctly and vetoes the stop.</em></p>
+
 This repository provides code for:
 
 - **Controlled counterfactual evaluations:** five paired state variants in Android phone tasks, ALFWorld, and WebShop
@@ -49,6 +56,27 @@ The controlled comparisons are:
 
 In the code, phone states are named `D_plain`, `D_explicit`, `N_honest`, `N_implicit`, and `N_explicit`; the ALFWorld and
 WebShop builders use `S_plain`, `S_think`, `F_honest`, `F_implicit`, and `F_explicit`.
+
+## Results at a glance
+
+<p align="center">
+  <img src="assets/probe_by_layer.png" width="560" alt="Probe AUROC by layer and head versus probe">
+</p>
+<p align="center"><em>The model knows. (a) A linear probe on the hidden state detects whether the phone step worked
+(AUROC up to 0.81), well above the model's own output (grey band). (b) In every domain the probe (filled) beats the
+output head (hollow).</em></p>
+
+<p align="center">
+  <img src="assets/patching.png" width="760" alt="Activation patching by layer">
+</p>
+<p align="center"><em>Where the record takes over (decider-4b). Patching one layer of the decision position restores the
+observation's effect by mid-depth, while the logged step and the claim arrive only in the last layers.</em></p>
+
+<p align="center">
+  <img src="assets/evigate.png" width="620" alt="How EviGate works">
+</p>
+<p align="center"><em>EviGate reads the decision-position state at a middle layer, before the record dominates, and vetoes
+terminal decisions when the probe says the step did not work. It costs one dot product in the same forward pass.</em></p>
 
 ## 2. Installation
 
