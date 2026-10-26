@@ -190,7 +190,7 @@ Run the scripts **from the repository root**, in this order, with `venv` active:
 
 | Script | Reproduces |
 | --- | --- |
-| `scripts/00_build_data.sh` | Section 3: paired states and LLM-written summaries |
+| `scripts/00_build_data.sh` | Section 3: the paired states and LLM-written summaries (unpacks the paper's exact files; `REBUILD=1` rebuilds them) |
 | `scripts/01_phones.sh` | Phone results in Tables 2–4; seven open models and the backbone comparison |
 | `scripts/02_alfworld_webshop.sh` | ALFWorld and WebShop results in Tables 2–4 |
 | `scripts/03_hosted_jev.sh` | Hosted Jev results; paired confidence intervals for Table 2 |
@@ -211,6 +211,12 @@ bash scripts/01_phones.sh
 ```
 
 Outputs are written to `results/`. The hidden-state files (`.npz`) are large and not included; the scripts regenerate them.
+
+**Reproducibility notes.** `00_build_data.sh` unpacks the exact paired states used in the paper, so every offline result
+starts from the same inputs. Rebuilding them (`REBUILD=1`) reproduces the phone states exactly, but not the ALFWorld and
+WebShop states: ALFWorld's environment chooses the order of its games, and WebShop draws each goal's price limit at
+random when it loads. The same randomness affects the live ALFWorld and WebShop agents, so reruns of Table 5 can differ
+slightly from the paper; the phone simulator is fully seeded.
 
 ### Live-agent protocol (Table 5)
 
@@ -254,7 +260,10 @@ paper. It needs a calibration file from a script that is not included, so these 
 They let readers check the reported numbers without rerunning the GPU experiments: `python scripts/show_results.py`
 prints Tables 2, 5 and 6 from them.
 
-`data/ac_sub_episodes.json` lists the 200 AndroidControl episodes of the phone subset. This subset is used for the larger
+`data/paired_states/` holds the exact paired states used in the paper (3.1 MB, gzipped JSON): phones (`ac`, `ac_sub`,
+`ac_llm`), ALFWorld (`alf_eval`, `alf_train`), WebShop (`ws_eval`, `ws_train`) and the synthetic diagnostic set (`data`).
+Each file has one row per state, with its cell (`D_plain`, `N_implicit`, …), its truth label, and the exact prompt the
+decision model reads. `data/ac_sub_episodes.json` lists the 200 AndroidControl episodes of the phone subset. This subset is used for the larger
 models, hosted Jev, the LLM-written summaries, and activation patching.
 
 ## 5. Code layout
