@@ -236,6 +236,9 @@ Implementation names of the Table 5 conditions:
 
 `collect` must run before `probe2` and `random2`; `scripts/05_live_agents.sh` runs them in the right order.
 
+The agent scripts also accept `conformal` and `random3`, an exploratory threshold variant that is not reported in the
+paper. It needs a calibration file from a script that is not included, so these two options will not run as shipped.
+
 ## 4. Precomputed results
 
 `results/summaries/` contains the analysis outputs behind the tables and figures:
