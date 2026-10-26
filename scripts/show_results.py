@@ -11,7 +11,7 @@ for k, v in J("table2_ci.json").items():
     print(f"  {k:26s} {v['obs'][0]:+7.2f} {v['logged'][0]:+7.2f} {v['claim'][0]:+7.2f}")
 
 print("\nTable 5 - task success (%) of live agents")
-phone = {g: J("e2e_v2_pooled.json")[g]["success"] for g in ("none", "verify", "probe")}
+phone = {g: J("e2e_pooled_s30.json")[g]["success"] for g in ("none", "verify", "probe")}
 f0, f1 = J("e2e_v2_s30_f0_rate.json"), J("e2e_v2_s30_f1_rate.json")
 phone["random"] = (f0["random4"]["success"] + f1["random4"]["success"]) / 2
 alf = {g: J(f"alf_e2e_{f}.json")["summary"]["success"] for g, f in

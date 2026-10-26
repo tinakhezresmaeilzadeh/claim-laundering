@@ -4,6 +4,7 @@ venv*/
 ext/
 data/*
 !data/ac_sub_episodes.json
+!data/paired_states/
 results/*
 !results/summaries/
 figs/
