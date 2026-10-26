@@ -6,9 +6,31 @@ authors:
     given-names: Tina
   - family-names: Azizi
     given-names: Seyedarmin
+  - family-names: Baghaei Potraghloo
+    given-names: Erfan
   - family-names: Kamal
     given-names: Mehdi
   - family-names: Pedram
     given-names: Massoud
 affiliation: "University of Southern California"
 year: 2026
+identifiers:
+  - type: url
+    value: "https://arxiv.org/abs/2610.25947"
+preferred-citation:
+  type: article
+  title: "Claim Laundering: When Agent Decision Models Trust Records Over Reality"
+  authors:
+    - family-names: Khezresmaeilzadeh
+      given-names: Tina
+    - family-names: Azizi
+      given-names: Seyedarmin
+    - family-names: Baghaei Potraghloo
+      given-names: Erfan
+    - family-names: Kamal
+      given-names: Mehdi
+    - family-names: Pedram
+      given-names: Massoud
+  journal: "arXiv preprint arXiv:2610.25947"
+  year: 2026
+  url: "https://arxiv.org/abs/2610.25947"

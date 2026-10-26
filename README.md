@@ -6,18 +6,19 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/paper-preprint%202026-b31b1b" alt="Paper: preprint 2026">
+  <a href="https://arxiv.org/abs/2610.25947"><img src="https://img.shields.io/badge/arXiv-2610.25947-b31b1b" alt="arXiv 2610.25947"></a>
   <img src="https://img.shields.io/badge/python-3.12-3776ab" alt="Python 3.12">
   <img src="https://img.shields.io/badge/license-MIT-2ea44f" alt="License: MIT">
   <img src="https://img.shields.io/badge/domains-phones%20%7C%20ALFWorld%20%7C%20WebShop-6250d6" alt="Domains: phones, ALFWorld, WebShop">
 </p>
 
 <p align="center">
-  <b>Tina Khezresmaeilzadeh, Seyedarmin Azizi, Mehdi Kamal, Massoud Pedram</b><br>
+  <b>Tina Khezresmaeilzadeh, Seyedarmin Azizi, Erfan Baghaei Potraghloo, Mehdi Kamal, Massoud Pedram</b><br>
   University of Southern California
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.25947">Paper</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="#key-results">Key results</a> ·
   <a href="#quick-start-no-gpu">Quick start</a> ·
@@ -276,11 +277,11 @@ chosen inside the training folds.
 ## 6. Citation
 
 ```bibtex
-@misc{khezresmaeilzadeh2026claim,
-  title  = {Claim Laundering: When Agent Decision Models Trust Records Over Reality},
-  author = {Khezresmaeilzadeh, Tina and Azizi, Seyedarmin and Kamal, Mehdi and Pedram, Massoud},
-  year   = {2026},
-  note   = {Preprint}
+@article{khezresmaeilzadeh2026claim,
+  title   = {Claim Laundering: When Agent Decision Models Trust Records Over Reality},
+  author  = {Khezresmaeilzadeh, Tina and Azizi, Seyedarmin and Baghaei Potraghloo, Erfan and Kamal, Mehdi and Pedram, Massoud},
+  journal = {arXiv preprint arXiv:2610.25947},
+  year    = {2026}
 }
 ```
 
