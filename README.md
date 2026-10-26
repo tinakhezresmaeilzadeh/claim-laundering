@@ -103,7 +103,7 @@ sees and does not transfer to new ones; EviGate leaves the model's weights untou
 The analysis outputs behind every table are included, so you can check the paper's numbers in seconds:
 
 ```bash
-git clone https://github.com/<your-username>/claim-laundering.git
+git clone https://github.com/tinakhezresmaeilzadeh/claim-laundering.git
 cd claim-laundering
 python scripts/show_results.py      # prints Tables 2, 5 and 6 from results/summaries (standard library only)
 ```
