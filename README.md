@@ -1,12 +1,39 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner_dark.png">
+    <img src="assets/banner_light.png" width="900" alt="Claim Laundering: decision models follow the agent's record over the environment">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/paper-preprint%202026-b31b1b" alt="Paper: preprint 2026">
+  <img src="https://img.shields.io/badge/python-3.12-3776ab" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/license-MIT-2ea44f" alt="License: MIT">
+  <img src="https://img.shields.io/badge/domains-phones%20%7C%20ALFWorld%20%7C%20WebShop-6250d6" alt="Domains: phones, ALFWorld, WebShop">
+</p>
+
+<p align="center">
+  <b>Tina Khezresmaeilzadeh, Seyedarmin Azizi, Mehdi Kamal, Massoud Pedram</b><br>
+  University of Southern California
+</p>
+
+<p align="center">
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#key-results">Key results</a> ·
+  <a href="#quick-start-no-gpu">Quick start</a> ·
+  <a href="#2-installation">Installation</a> ·
+  <a href="#3-reproducing-the-experiments">Reproduce</a> ·
+  <a href="#6-citation">Cite</a>
+</p>
+
 # Claim Laundering: When Agent Decision Models Trust Records Over Reality
 
-**Code and reproduction instructions for the paper** by Tina Khezresmaeilzadeh, Seyedarmin Azizi, Mehdi Kamal, and
-Massoud Pedram (University of Southern California).
+**TL;DR.** Fast *decision models* (Jev, Kev, decider, Laya) pick an agent's next action from a state that contains both
+what the environment shows and the agent's own record of what it did. When an action fails silently but the record says
+it worked, these models **follow the record**: they stop, move on or buy anyway. Their hidden states still encode that the
+step failed, so a linear probe on a middle layer, **EviGate**, can veto those decisions for the cost of one dot product.
 
-Agent decision models choose actions from inputs that contain both the current observation of the environment and the
-agent's record of its earlier actions. These sources can disagree: an action may fail silently while the record says it
-succeeded. We study whether decision models follow the observed state or the agent's record when making consequential
-decisions such as **stop**, **proceed**, or **buy**.
+## How it works
 
 <p align="center">
   <img src="assets/example.png" width="560" alt="A record-state mismatch on a phone">
@@ -15,20 +42,73 @@ decisions such as **stop**, **proceed**, or **buy**.
 The decision model follows the record and declares the task done. EviGate, a probe on the model's own layer-20 state,
 reads the screen correctly and vetoes the stop.</em></p>
 
-This repository provides code for:
+<p align="center">
+  <img src="assets/evigate.png" width="640" alt="How EviGate works">
+</p>
+<p align="center"><em>EviGate reads the decision position at a middle layer of the same forward pass, before the record
+dominates, and vetoes terminal decisions (stop, proceed, buy) when the probe says the step did not work.</em></p>
 
-- **Controlled counterfactual evaluations:** five paired state variants in Android phone tasks, ALFWorld, and WebShop
-  that isolate the influence of observations, logged actions, and success claims.
-- **Hidden-state probing:** linear probes that test whether action success is recoverable from internal representations
-  even when the model's final decision is wrong.
-- **Activation patching:** layer-wise interventions measuring when record-dependent information influences the decision
-  (decider-4b and decider-12b).
-- **EviGate:** an intermediate-layer linear readout that vetoes unsupported commitment decisions without changing the
-  decision model's weights.
-- **Fine-tuning:** LoRA adaptation on paired states, evaluated as an alternative to gating.
+## Key results
 
-The repository includes experiment scripts and precomputed summary results. Full reproduction also requires external
-datasets and agent adapters, model downloads, GPUs, and an OpenRouter key for the hosted Jev experiments.
+**1. The record wins.** Across four decision models (decider-4b, Kev-4B, decider-12b, hosted Jev) and three domains,
+the agent's record moves the decision more than the observation in all 12 configurations. After a failed step whose record
+claims success, the models still stop, proceed or buy in 53–100% of cases.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/effects_dark.png">
+    <img src="assets/effects_light.png" width="640" alt="Effect of the observation, the logged step and the success claim on the decision">
+  </picture>
+</p>
+
+**2. The model knows.** A linear probe on the hidden state detects whether the step worked on held-out apps, games and
+goals (AUROC 0.77–1.00), well above the model's own output.
+
+<p align="center">
+  <img src="assets/probe_by_layer.png" width="560" alt="Probe AUROC by layer and output head versus probe">
+</p>
+
+**3. The record takes over late.** Activation patching shows the observation reaching the decision position by
+mid-depth, while the logged step and the claim arrive only in the last layers (decider-4b below; decider-12b shows the
+same order).
+
+<p align="center">
+  <img src="assets/patching.png" width="760" alt="Activation patching by layer">
+</p>
+
+**4. Reading the middle layer helps live agents.** Under injected silent failures, EviGate raises task success in a phone
+simulator, ALFWorld and WebShop, and beats random vetoes at a matched rate on phones and WebShop. It must be fit on states
+from the deployed agent: fit on offline contrast sets, it fails live.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/live_dark.png">
+    <img src="assets/live_light.png" width="820" alt="Task success of live agents with no gate, random veto and EviGate">
+  </picture>
+</p>
+
+| Live task success (%) | Phones (sim.) | ALFWorld | WebShop |
+| --- | --- | --- | --- |
+| No gate | 77.2 | 42.5 | 8.5 |
+| Second question | 83.2 | 61.2 | 7.0 |
+| Random veto, matched rate | 77.6 | 58.2 | 4.5 |
+| **EviGate** | **82.4** | **61.2** | **13.5** |
+
+**5. Fine-tuning works too, but only where it is trained.** LoRA on paired states fixes the decision in the domains it
+sees and does not transfer to new ones; EviGate leaves the model's weights untouched.
+
+## Quick start (no GPU)
+
+The analysis outputs behind every table are included, so you can check the paper's numbers in seconds:
+
+```bash
+git clone https://github.com/<your-username>/claim-laundering.git
+cd claim-laundering
+python scripts/show_results.py      # prints Tables 2, 5 and 6 from results/summaries (standard library only)
+```
+
+To rerun the experiments themselves, see [Installation](#2-installation) and
+[Reproducing the experiments](#3-reproducing-the-experiments).
 
 ## 1. Experimental design: five state variants
 
@@ -56,27 +136,6 @@ The controlled comparisons are:
 
 In the code, phone states are named `D_plain`, `D_explicit`, `N_honest`, `N_implicit`, and `N_explicit`; the ALFWorld and
 WebShop builders use `S_plain`, `S_think`, `F_honest`, `F_implicit`, and `F_explicit`.
-
-## Results at a glance
-
-<p align="center">
-  <img src="assets/probe_by_layer.png" width="560" alt="Probe AUROC by layer and head versus probe">
-</p>
-<p align="center"><em>The model knows. (a) A linear probe on the hidden state detects whether the phone step worked
-(AUROC up to 0.81), well above the model's own output (grey band). (b) In every domain the probe (filled) beats the
-output head (hollow).</em></p>
-
-<p align="center">
-  <img src="assets/patching.png" width="760" alt="Activation patching by layer">
-</p>
-<p align="center"><em>Where the record takes over (decider-4b). Patching one layer of the decision position restores the
-observation's effect by mid-depth, while the logged step and the claim arrive only in the last layers.</em></p>
-
-<p align="center">
-  <img src="assets/evigate.png" width="620" alt="How EviGate works">
-</p>
-<p align="center"><em>EviGate reads the decision-position state at a middle layer, before the record dominates, and vetoes
-terminal decisions when the probe says the step did not work. It costs one dot product in the same forward pass.</em></p>
 
 ## 2. Installation
 
@@ -141,6 +200,7 @@ Run the scripts **from the repository root**, in this order, with `venv` active:
 | `scripts/08_overhead.sh` | Appendix: serving latency |
 | `scripts/09_best_of_n.sh` | Appendix: the probe as a best-of-*N* verifier |
 | `scripts/10_figures.sh` | Figures 2, 4 and 5 |
+| `scripts/show_results.py` | Prints Tables 2, 5 and 6 from the included summaries (no GPU) |
 
 For example:
 
@@ -187,7 +247,8 @@ Implementation names of the Table 5 conditions:
 - fine-tuning evaluations;
 - serving-latency measurements.
 
-They let readers check the reported numbers without rerunning the GPU experiments.
+They let readers check the reported numbers without rerunning the GPU experiments: `python scripts/show_results.py`
+prints Tables 2, 5 and 6 from them.
 
 `data/ac_sub_episodes.json` lists the 200 AndroidControl episodes of the phone subset. This subset is used for the larger
 models, hosted Jev, the LLM-written summaries, and activation patching.
@@ -204,7 +265,7 @@ models, hosted Jev, the LLM-written summaries, and activation patching.
 | `src/agents/` | `alf_e2e.py`, `ws_e2e.py`, `sim_e2e_v2.py`, `sim_e2e.py`, `analyze_e2e.py`, `merge_ws.py`, `ws_bon.py`, `analyze_bon.py` | Live agents with gates; best-of-*N* |
 | `src/finetune/` | `cit_train.py`, `cit_eval.py` | LoRA fine-tuning on paired states and its evaluation |
 | `src/bench/` | `bench_overhead.py`, `bench_engine.py`, `bench_kev.py` | Serving overhead of EviGate |
-| `src/figures/` | `layer_curves.py`, `make_figs.py` | Figures and per-layer probe curves |
+| `src/figures/` | `layer_curves.py`, `make_figs.py`, `readme_figs.py` | Paper figures, per-layer probe curves, and the README graphics |
 
 Probes are evaluated with groups held out by app (phones), game (ALFWorld), or goal (WebShop), and the probe layer is
 chosen inside the training folds.
@@ -219,6 +280,11 @@ chosen inside the training folds.
   note   = {Preprint}
 }
 ```
+
+## Contributing
+
+Issues and pull requests are welcome, for example new decision models, new domains, or other gate designs. If you
+build on this work, we would love to hear about it. If you find the repository useful, please consider giving it a ⭐.
 
 ## 7. License and contact
 
